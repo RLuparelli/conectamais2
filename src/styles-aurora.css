@@ -120,7 +120,7 @@ h2 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-  padding: 1rem 0;
+  padding: 0.6rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -139,7 +139,7 @@ h2 {
 }
 
 .logo {
-  width: 160px;
+  width: 130px;
   filter: brightness(1.2);
   transition: width 0.3s ease;
 }
@@ -1291,40 +1291,50 @@ section {
 /* Header Mobile Optimization */
 @media (max-width: 768px) {
   .header {
-    padding: 0.7rem 0;
+    padding: 0.4rem 0;
   }
   
   .header-content {
     padding: 0 1rem !important;
+    align-items: center;
   }
   
   .logo {
-    width: 130px;
+    width: 100px;
   }
   
   .cta-button {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
     white-space: nowrap;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
   }
   
   .header-content {
     padding: 0 0.8rem !important;
+    align-items: center;
   }
   
   .logo {
-    width: 110px;
+    width: 85px;
   }
   
   .cta-button {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.75rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
