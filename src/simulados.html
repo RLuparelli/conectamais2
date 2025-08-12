@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulados de Proteção Digital | Vida Digital Segura 50+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="simulados.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img class="logo" src="assets/conectamais-logo.png" />
+                <a href="index.html" class="cta-button">← Voltar ao Início</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-simulados">
+        <div class="container">
+            <h1>🛡️ Proteção Ativa - Centro de Treinamento</h1>
+            <p>Teste seus conhecimentos e aprenda a se proteger contra golpes digitais de forma divertida e segura!</p>
+            <div class="progress-indicator">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="progressText">0% Completo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="simulados-content">
+        <div class="container">
+            
+            <!-- Aulas Section -->
+            <section class="aulas-section">
+                <h2>📚 Aulas Interativas</h2>
+                <div class="aulas-grid">
+                    
+                    <div class="aula-card" data-aula="1">
+                        <div class="aula-icon">🚨</div>
+                        <h3>Golpe do Parente</h3>
+                        <p>Como identificar quando alguém finge ser seu filho/neto pedindo dinheiro.</p>
+                        <button class="btn-aula" onclick="iniciarAula(1)">Iniciar Aula</button>
+                        <div class="aula-status" id="status-aula-1">🔒 Não iniciada</div>
+                    </div>
+
+                    <div class="aula-card" data-aula="2">
+                        <div class="aula-icon">📧</div>
+                        <h3>E-mails e SMS Falsos</h3>
+                        <p>Como reconhecer mensagens falsas que fingem ser do seu banco.</p>
+                        <button class="btn-aula" onclick="iniciarAula(2)" disabled>Iniciar Aula</button>
+                        <div class="aula-status" id="status-aula-2">🔒 Bloqueada</div>
+                    </div>
+
+                    <div class="aula-card" data-aula="3">
+                        <div class="aula-icon">🔐</div>
+                        <h3>Dupla Proteção</h3>
+                        <p>Como ativar proteção extra para sua conta do banco ficar mais segura.</p>
+                        <button class="btn-aula" onclick="iniciarAula(3)" disabled>Iniciar Aula</button>
+                        <div class="aula-status" id="status-aula-3">🔒 Bloqueada</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section class="quiz-section" id="quizSection">
+                <h2>🧠 Desafio: Quiz de Identificação de Golpes</h2>
+                <div class="quiz-card" id="quizCard">
+                    <div class="quiz-intro">
+                        <p>Teste seus conhecimentos! Identifique <strong>3 sinais de golpe</strong> nas situações apresentadas.</p>
+                        <button class="btn-quiz" onclick="iniciarQuiz()" id="btnIniciarQuiz" disabled>🔒 Complete as aulas para desbloquear</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simulador Section -->
+            <section class="simulador-section" id="simuladorSection">
+                <h2>🎭 Simulador Interativo de Golpes</h2>
+                <div class="simulador-card">
+                    <div class="simulador-intro">
+                        <p>Experimente situações reais de tentativas de golpe em um ambiente 100% seguro!</p>
+                        <button class="btn-simulador" onclick="iniciarSimulador()" id="btnIniciarSimulador" disabled>🔒 Complete o quiz para desbloquear</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal para Aulas -->
+    <div id="aulaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="aulaContent"></div>
+        </div>
+    </div>
+
+    <!-- Modal para Quiz -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharQuizModal()">&times;</span>
+            <div id="quizContent"></div>
+        </div>
+    </div>
+
+    <!-- Modal para Simulador -->
+    <div id="simuladorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharSimuladorModal()">&times;</span>
+            <div id="simuladorContent"></div>
+        </div>
+    </div>
+
+    <script src="simulados.js"></script>
+</body>
+
+</html>

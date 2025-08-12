@@ -1,0 +1,27 @@
+{
+  "name": "vida-digital-segura-50",
+  "version": "1.0.0",
+  "description": "Landing page para o programa de independência digital desenvolvido especialmente para pessoas com mais de 50 anos",
+  "main": "public/index.html",
+  "scripts": {
+    "build": "mkdir -p public && cp src/conectamais.html public/index.html && cp src/simulados.html public/ && cp -r src/assets public/ && cp src/styles.css public/ && cp src/simulados.css public/ && cp src/simulados.js public/",
+    "start": "python3 -m http.server 8000 --directory public || python -m http.server 8000 --directory public || npx serve public",
+    "dev": "node server.js",
+    "dev:python": "cd public && python3 -m http.server 3000"
+  },
+  "keywords": [
+    "landing-page",
+    "digital-education",
+    "seniors",
+    "technology",
+    "security"
+  ],
+  "author": "Rodrigo Luparelli",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
